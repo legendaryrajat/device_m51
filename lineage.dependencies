@@ -1,0 +1,6 @@
+[
+    {
+        "repository": "device_m51-common",
+        "target_path": "device/samsung/m51-common"
+    }
+]
