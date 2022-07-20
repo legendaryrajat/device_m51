@@ -8,18 +8,6 @@
 include device/samsung/sm6150-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/samsung/m51
-BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := m51
-
-# Audio
-TARGET_PROVIDES_AUDIO_EXTNS := true
-
-# Compression
-PRODUCT_FS_COMPRESSION := 1
 
 # Kernel
 TARGET_KERNEL_CONFIG := m51_defconfig
@@ -54,20 +42,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 BOARD_USES_METADATA_PARTITION := true
 
-# Properties
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-
-# Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
-
-# Screen density
-TARGET_SCREEN_DENSITY := 440
-
-# Sepolicy
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-
-# Vendor security patch level
-VENDOR_SECURITY_PATCH := 2022-06-01
+TARGET_SCREEN_DENSITY := 420
 
 # Inherit from proprietary files
 include vendor/samsung/m51/BoardConfigVendor.mk
